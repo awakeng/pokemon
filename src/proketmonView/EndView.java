@@ -7,7 +7,7 @@ import poketmon.model.dto.Trainer;
 public class EndView {
 
 	// 특정 프로젝트 출력
-	public static void viewAll(Trainer trainer) {
+	public static void viewTrainer(Trainer trainer) {
 		System.out.println(trainer);
 	}
 	  
