@@ -5,6 +5,7 @@ import javax.security.auth.login.FailedLoginException;
 import poketmon.exception.NotExistException;
 import poketmon.model.PoketmonModelMethod;
 import poketmon.model.dto.Trainer;
+import proketmonView.EndView;
 import proketmonView.FailView;
 
 public class PoketmonController {
@@ -19,12 +20,20 @@ public class PoketmonController {
 	// 모든 프로젝트 검색
 	
 	// 특정 프로젝트 검색
+	public void viewTrainer(String trainerName) throws NotExistException {
+		Trainer trainer = method.getTrainer(trainerName);
+		if(trainer != null) {
+			EndView.viewTrainer(trainer);
+		} else {
+			EndView.viewMessage("존재하지 않는 트레이너 입니다.");
+		}
+	}
 	
 	// 새로운 프로젝트 저장
 	public void insertTrainer(Trainer newTrainer) {
 		method.trainerInsert(newTrainer);
 	}
-	
+
 	// 존재하는 프로젝트 수정
 	public void updateProject(String trainerName, Object obj) {
 		try {

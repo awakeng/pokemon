@@ -24,11 +24,11 @@ public class PoketmonModelMethod {
 	
 	
 	//특정 Trainer 반환
-	public Trainer getTrainer(String tainerName) throws NotExistException {
+	public Trainer getTrainer(String trainerName) throws NotExistException {
 		Trainer trainer = null;
 		for(int i = 0; i<getAllTrainers().size();i++) {
 			trainer = getAllTrainers().get(i);
-			if(trainer != null && trainer.getName().equals(tainerName)) {
+			if(trainer != null && trainer.getName().equals(trainerName)) {
 				return trainer;
 			}
 		}
