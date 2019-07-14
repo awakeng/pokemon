@@ -33,7 +33,6 @@ public class PoketmonModelMethod {
 			}
 		}
 		throw new NotExistException("등록되지 않은 트레이너 입니다.");
-		
 	}
 	
 	
@@ -51,12 +50,11 @@ public class PoketmonModelMethod {
 			throw new NotExistException("xxxxxxx 수정하고자 하는 Trainer가 미 존재합니다. xxxxxxx\n");
 		}
 		if(obj instanceof String) {
-			trainer.setName((String)obj);
+			trainer.setHometown((String)obj);
 		} else if(obj instanceof Poketmon) {
 			trainer.setPoketmon((Poketmon)obj);
-		} else {
-			trainer.setBadge((Integer.parseInt((String)obj)));			// 입력받은 값을 정수 타입으로 변환
-			trainer.setBadge((Integer.parseInt((String)obj)));			// �Է¹��� ���� ���� Ÿ������ ��ȯ
+		} else if(obj instanceof Integer){
+			trainer.setBadge((int)obj);			// 입력받은 값을 정수 타입으로 변환
 		}
 	} 
 	

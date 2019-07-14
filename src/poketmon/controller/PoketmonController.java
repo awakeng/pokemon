@@ -16,7 +16,7 @@ public class PoketmonController {
 		return instance;
 	}
 	
-	// 모든 프로젝트 검색
+	// 모든 트레이너 검색
 	public void TrainerListView() {
 		ArrayList<Trainer> trainerList = method.getAllTrainers();
 		if(trainerList.size() != 0) {
@@ -27,7 +27,7 @@ public class PoketmonController {
 		}
 	}
 	
-	// 특정 프로젝트 검색
+	// 특정 트레이너 검색
 	public void viewTrainer(String trainerName) throws NotExistException {
 		Trainer trainer = method.getTrainer(trainerName);
 		if(trainer != null) {
@@ -37,13 +37,13 @@ public class PoketmonController {
 		}
 	}
 	
-	// 새로운 프로젝트 저장
+	// 새로운 트레이너 저장
 	public void insertTrainer(Trainer newTrainer) {
 		method.trainerInsert(newTrainer);
 	}
 
-	// 존재하는 프로젝트 수정
-	public void updateProject(String trainerName, Object obj) {
+	// 존재하는 트레이너 수정
+	public void updateData(String trainerName, Object obj) {
 		try {
 			method.dataUpdate(trainerName, obj);
 		} catch (NotExistException e) {
@@ -51,7 +51,7 @@ public class PoketmonController {
 		}
 	}
 	
-	// 모든 프로젝트 삭제
+	// 트레이너 삭제
 	public void deleteTrainer(String trainerName) {
 		try {
 			method.trainerDelete(trainerName);
