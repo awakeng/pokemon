@@ -6,19 +6,19 @@ import poketmon.model.dto.Trainer;
 
 public class EndView {
 
-	// Æ¯Á¤ ÇÁ·ÎÁ§Æ® Ãâ·Â
+	// íŠ¹ì • í”„ë¡œì íŠ¸ ì¶œë ¥
 	public static void viewAll(Trainer trainer) {
 		System.out.println(trainer);
 	}
 	  
-	// ¸ğµç ÇÁ·ÎÁ§Æ® Ãâ·Â
+	// ëª¨ë“  í”„ë¡œì íŠ¸ ì¶œë ¥
 	public static void viewList(ArrayList<Trainer> allData) {
 		for(Trainer v : allData) {
 			System.out.println(v);
 		}
 	}
 	
-	// ¿¹¿Ü°¡ ¾Æ´Ñ ´Ü¼ø ¸Ş¼¼Áö Ãâ·Â
+	// ì˜ˆì™¸ê°€ ì•„ë‹Œ ë‹¨ìˆœ ë©”ì„¸ì§€ ì¶œë ¥
 	public static void viewMessage(String message) {
 		System.out.println(message);
 	}

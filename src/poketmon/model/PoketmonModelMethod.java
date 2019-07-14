@@ -10,14 +10,14 @@ public class PoketmonModelMethod {
 	public void dataUpdate(String trainerName, Object obj) throws NotExistException{
 		Trainer trainer = getTrainer(trainerName);
 		if(trainer == null) {
-			throw new NotExistException("xxxxxxx ¼öÁ¤ÇÏ°íÀÚ ÇÏ´Â Trainer°¡ ¹Ì Á¸ÀçÇÕ´Ï´Ù. xxxxxxx\n");
+			throw new NotExistException("xxxxxxx ìˆ˜ì •í•˜ê³ ì í•˜ëŠ” Trainerê°€ ë¯¸ ì¡´ì¬í•©ë‹ˆë‹¤. xxxxxxx\n");
 		}
 		if(obj instanceof String) {
 			trainer.setName((String)obj);
 		} else if(obj instanceof Poketmon) {
 			trainer.setPoketmon((Poketmon)obj);
 		} else {
-			trainer.setBadge((Integer.parseInt((String)obj)));			// ÀÔ·Â¹ŞÀº °ªÀ» Á¤¼ö Å¸ÀÔÀ¸·Î º¯È¯
+			trainer.setBadge((Integer.parseInt((String)obj)));			// ì…ë ¥ë°›ì€ ê°’ì„ ì •ìˆ˜ íƒ€ì…ìœ¼ë¡œ ë³€í™˜
 		}
 		
 	} 
