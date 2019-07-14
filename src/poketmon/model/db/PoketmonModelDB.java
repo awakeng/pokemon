@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import poketmon.model.dto.Poketmon;
 import poketmon.model.dto.Trainer;
 
+
+//ProbonoModelVirtualDB과 같은 역할
 public class PoketmonModelDB {
 	private static PoketmonModelDB instance = new PoketmonModelDB();
 	private ArrayList<Trainer> trainerList = new ArrayList<Trainer>();
@@ -43,7 +45,7 @@ public class PoketmonModelDB {
 	}
 	
 	//검색
-	public ArrayList<Trainer> getTrainer(){
+	public ArrayList<Trainer> getTrainerList(){
 		return trainerList;
 	}
 	
