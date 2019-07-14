@@ -20,5 +20,5 @@ public class PoketmonModelMethod {
 			trainer.setBadge((Integer.parseInt((String)obj)));			// 입력받은 값을 정수 타입으로 변환
 		}
 		
-	}
+	} 
 }

@@ -10,7 +10,7 @@ public class EndView {
 	public static void viewAll(Trainer trainer) {
 		System.out.println(trainer);
 	}
-	
+	  
 	// 모든 프로젝트 출력
 	public static void viewList(ArrayList<Trainer> allData) {
 		for(Trainer v : allData) {
