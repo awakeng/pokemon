@@ -18,16 +18,16 @@ public class PoketmonModelMethod {
 	
 	
 	//모든 Trainer 반환
-	public ArrayList<Trainer> getAllTrainer(){
-		return poketmonmodeldata.getTrainer();
+	public ArrayList<Trainer> getAllTrainers(){
+		return poketmonmodeldata.getTrainerList();
 	}
 	
 	
 	//특정 Trainer 반환
 	public Trainer getTrainer(String tainerName) throws NotExistException {
 		Trainer trainer = null;
-		for(int i = 0; i<getAllTrainer().size();i++) {
-			trainer = getAllTrainer().get(i);
+		for(int i = 0; i<getAllTrainers().size();i++) {
+			trainer = getAllTrainers().get(i);
 			if(trainer != null && trainer.getName().equals(tainerName)) {
 				return trainer;
 			}
@@ -60,4 +60,14 @@ public class PoketmonModelMethod {
 	} 
 	
 	// Trainer 삭제
+	public void trainerDelete(String trainerName) throws NotExistException {
+		Trainer trainer = getTrainer(trainerName);
+		if(trainer == null) {
+			throw new NotExistException("해당 트레이너가 없습니다.");
+		}else {
+			poketmonmodeldata.getTrainerList().remove(trainer);
+		}
+	}
+	
+	
 }

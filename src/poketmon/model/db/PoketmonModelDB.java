@@ -45,7 +45,7 @@ public class PoketmonModelDB {
 	}
 	
 	//검색
-	public ArrayList<Trainer> getTrainer(){
+	public ArrayList<Trainer> getTrainerList(){
 		return trainerList;
 	}
 	
