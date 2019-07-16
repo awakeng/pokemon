@@ -1,4 +1,4 @@
-package proketmonView;
+package pokemonView;
 
 public class FailView {
 	public static void failMessageView(String message) {

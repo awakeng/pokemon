@@ -1,4 +1,4 @@
-package poketmon.exception;
+package pokemon.exception;
 
 public class NotExistException extends Exception {
 	public NotExistException() {}
